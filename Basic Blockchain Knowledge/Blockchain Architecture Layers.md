@@ -34,7 +34,7 @@ To solve this problem, clever developers have decided to take blockchains like 
 - **Layer** **1** (Ethereum, Bitcoin):  to focus on fundamental changes in blockchains at their core
 - **Layer 2** (zkSync, LightingNetwork): to add additional structures on top of layer 1 to enhance performance without compromising the blockchain's core functionality. For example, if a layer one blockchain focuses on security and decentralization, it can be the job of an L2 to focus on scale.
 
-Before getting too in-depth into **what Layer 1 and Layer 2 blockchains are**, let’s understand what we mean when we refer to the term “layer” in the context of blockchain architectures.
+
 
 ‍
 
