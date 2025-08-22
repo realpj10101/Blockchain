@@ -64,3 +64,5 @@ Blockchain technology was first outlined in 1991 by Stuart Haber and W. Scott St
 ## Blockchain vs. Banks
   
 Blockchains have been heralded as a disruptive force in the finance sector, especially with the functions of payments and banking. However, banks and decentralized blockchains are vastly different.
+
+

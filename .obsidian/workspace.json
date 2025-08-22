@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "29411cf3487004e5",
+        "id": "c06ab7d323e62f7d",
         "type": "tabs",
         "children": [
           {
-            "id": "a43be51761e6f464",
+            "id": "875f1b71e8ce7886",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,11 +180,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a43be51761e6f464",
+  "active": "875f1b71e8ce7886",
   "lastOpenFiles": [
-    "Basic Blockchain Knowledge/What is Decentralized Finance (DeFi) and How Does it Work?.md",
-    "Basic Blockchain Knowledge/What is Blockchain.md",
+    "Assests/output (8).png",
     "General Blockchain Knowledge/Storage.md",
+    "Assests/output (7).png",
+    "Basic Blockchain Knowledge/What is Blockchain.md",
+    "Basic Blockchain Knowledge/What is Decentralized Finance (DeFi) and How Does it Work?.md",
+    "Basic Blockchain Knowledge/Smart Contract.md",
     "General Blockchain Knowledge/Decentralization vs Trust.md",
     "Assests/output (6).png",
     "Assests/trilemma.png",
@@ -195,7 +198,6 @@
     "Assests/output (3).png",
     "Assests/output (2).png",
     "Assests/output (1).png",
-    "Basic Blockchain Knowledge/Smart Contract.md",
     "General Blockchain Knowledge",
     "Assests",
     "Basic Blockchain Knowledge",
