@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c06ab7d323e62f7d",
+        "id": "aeab75d541894cd1",
         "type": "tabs",
         "children": [
           {
-            "id": "875f1b71e8ce7886",
+            "id": "14759a9738f14353",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,24 +180,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "875f1b71e8ce7886",
+  "active": "14759a9738f14353",
   "lastOpenFiles": [
-    "Assests/output (8).png",
-    "General Blockchain Knowledge/Storage.md",
-    "Assests/output (7).png",
-    "Basic Blockchain Knowledge/What is Blockchain.md",
-    "Basic Blockchain Knowledge/What is Decentralized Finance (DeFi) and How Does it Work?.md",
-    "Basic Blockchain Knowledge/Smart Contract.md",
-    "General Blockchain Knowledge/Decentralization vs Trust.md",
-    "Assests/output (6).png",
     "Assests/trilemma.png",
-    "Assests/output (5).png",
+    "General Blockchain Knowledge/Storage.md",
+    "Assests/output (8).png",
+    "General Blockchain Knowledge/Decentralization vs Trust.md",
+    "Basic Blockchain Knowledge/Blockchain Architecture Layers.md",
+    "Basic Blockchain Knowledge/Smart Contract.md",
+    "Basic Blockchain Knowledge/What is Decentralized Finance (DeFi) and How Does it Work?.md",
+    "Basic Blockchain Knowledge/What is Blockchain.md",
+    "Assests/output (1).png",
     "Assests/output (4).png",
     "General Blockchain Knowledge/Mining and incentive models.md",
-    "Basic Blockchain Knowledge/Blockchain Architecture Layers.md",
+    "Assests/output (7).png",
+    "Assests/output (6).png",
+    "Assests/output (5).png",
     "Assests/output (3).png",
     "Assests/output (2).png",
-    "Assests/output (1).png",
     "General Blockchain Knowledge",
     "Assests",
     "Basic Blockchain Knowledge",

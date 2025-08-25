@@ -145,3 +145,36 @@ IPFS is a set of building blocks for a better web. Open protocols to make your d
 
 [[output (8).png]]
 
+
+### How IPFS represents and addresses data
+
+IPFS represents data as content-addressed blocks, and operates on those data blocks using the following subsystems:
+
+- Content Identifier (CID)
+- InterPlanetary Linked Data (IPLD)
+- Content Addressable aRchive (CAR) files
+
+#### Content Identifier (CID)
+
+In IPFS, data is chunked into blocks, which are assigned a unique identifier called a Content Identifier (CID). In general, the CID is computed by combining the hash of the data with its codec. The codec is generated using Multiformats.
+
+CIDs are unique to the data from which they were computed, which provides IPFS with the following benefits:
+
+- Data can be fetched based on its content, rather than its location.
+- The CID of the data received can be computed and compared to the CID requested, to verify that the data is what was requested.
+
+Codec -> Specifies what type the data is (JSON, image, vidoe )
+
+**CID = Hash + Codec**
+
+##### Features and benefits of (CID)
+
+1- Content-based addressing 
+* On regular on internet: File calls by location address (URL)
+* On IPFS: File calls by **CID** -> Its not important where the file is, You can find it wherever it is
+
+2- Verification
+* When you get the file -> hash of that data computes again
+* If CID = Wanted hash -> data is not changed
+
+
