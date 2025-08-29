@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "aeab75d541894cd1",
+        "id": "d0c468fd71985f64",
         "type": "tabs",
         "children": [
           {
-            "id": "d04fb333098c2f9d",
+            "id": "db66f2f0830c7e7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,10 +180,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d04fb333098c2f9d",
+  "active": "db66f2f0830c7e7d",
   "lastOpenFiles": [
-    "Assests/trilemma.png",
+    "General Blockchain Knowledge/Cryptocurrency Wallet.md",
+    "General Blockchain Knowledge/Cryptocurrencies.md",
+    "General Blockchain Knowledge/Blockchain Forking.md",
     "General Blockchain Knowledge/Storage.md",
+    "Assests/trilemma.png",
     "Assests/output (8).png",
     "General Blockchain Knowledge/Decentralization vs Trust.md",
     "Basic Blockchain Knowledge/Blockchain Architecture Layers.md",
