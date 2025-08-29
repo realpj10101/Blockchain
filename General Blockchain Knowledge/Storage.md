@@ -177,4 +177,129 @@ Codec -> Specifies what type the data is (JSON, image, vidoe )
 * When you get the file -> hash of that data computes again
 * If CID = Wanted hash -> data is not changed
 
+####  InterPlanetary Linked Data (IPLD)
+
+IPFS uses InterPlanetary Linked Data (IPLD) to work with CIDs and content-addressed data. IPFS uses IPLD to represent relationships between content-addressed data, such as file directories and other hierarchical structures, using a Directed Acyclic Graph (DAG) called a Merkle DAG. Using IPLD for the general functionality, IPFS is able provide a more tailored, specific mechanism for representing and addressing files, directories, and their symlinks, called [UnixFS](https://docs.ipfs.tech/concepts/file-systems/#unix-file-system-unixfs). With UnixFS, IPFS can chunk and link data too big to fit in a single block, and use the chunked representation to store and manage the data.
+
+IPLD provides IPFS with the following benefits:
+
+- The ability to represent and work with arbitrary data, whether that data is standard files and directories, linked data, a Merkle DAG, or another data type.
+- Base functionality to structure, serialize, traverse and link content-addressed data, which can be leveraged by abstractions like UnixFS for more specific use cases.
+- Interoperable protocols.
+- Easy upgradeability.
+- Backwards compatibility.
+
+#### Content Addressable aRchive (CAR) files
+
+IPFS uses Content Addressable aRchive (CAR) files to store and transfer a serialized archive of IPLD content-addressed data. CAR files are similar to TAR files, in that they that are designed for storing collections of content addressed data.
+
+### How content routing works in IPFS
+
+_Content routing_ refers to the way in which IPFS determines where to find a given CID on the network; specifically, which network peers are providing the CIDs you are requesting. In other words, a node cannot simply find data in the network with a CID alone; it requires information about the IP addresses and ports of its peers on the network. To route content, IPFS uses the following subsystems:
+
+- Kademlia Distributed Hash Table (DHT)
+- Bitswap
+- mDNS
+- Delegated routing over HTTP
+
+#### Kademlia Distributed Hash Table
+
+IPFS uses Kademlia, a Distributed Hash Table (DHT) designed for decentralized peer-to-peer networks. Kademlia helps you find peers in the IPFS network storing the data you are seeking. The Kademlia DHT can be thought of as a large table distributed across many nodes that stores information about which peers (IPs) have which data (CIDs). Kademlia provides a highly efficient, self-organizing system that withstands node churn. Kademlia uses [libp2p](https://docs.ipfs.tech/concepts/libp2p/) to establish connectivity.
+
+#### Bitswap (for content routing)
+
+IPFS nodes use Bitswap, a message-based, peer-to-peer network protocol for the transfer of data, that is _also_ used for routing data. With Bitswap, an IPFS node can ask any of the peers that it is connected to if they have any of the CIDs that node is looking for, all without traversing the [Kademlia DHT](https://docs.ipfs.tech/concepts/how-ipfs-works/#kademlia-distributed-hash-table-dht). Peers also store wantlists, so that if a peer receives the requested data at a later time, it can then send it to the node that originally requested. Like Kademlia, Bitswap uses [libp2p](https://docs.ipfs.tech/concepts/libp2p/) to establish connectivity.
+
+#### Delegated routing over HTTP
+
+Delegated content routing is a mechanism for IPFS implementations to use for offloading content routing to another process/server using an HTTP API. For example, if an IPFS node does not implement the DHT, a delegated router can search the DHT for peers on its behalf. The main benefit of delegated routing is that nodes are not required to implement routing functionality themselves if they do not have the computing resources to do so, or wish to build an IPFS system with a custom backend for routing. So, delegated routing over HTTPS provides IPFS nodes with a standard interface that allows more flexibility in terms of how content routing works.
+
+#### mDNS
+
+To quickly and efficiently discover peers in local networks, IPFS uses Multicast Domain Name System (mDNS), a type of DNS protocol that resolves human-readable internet domain names to IP names without the use of a name server.
+
+The use of mDNS enables quick and efficient discovery of IPFS nodes in local networks without any coordination, e.g., without internet connectivity or access to [bootstrap nodes](https://docs.ipfs.tech/concepts/nodes/#bootstrap).
+
+### How IPFS transfers data
+
+In addition to [routing data](https://docs.ipfs.tech/concepts/how-ipfs-works/#how-content-routing-works-in-ipfs), nodes in the IPFS network must efficiently distribute and deliver the content addressed data, taking into account that there are some nodes in the network who already have a copy of the data, and other nodes who do not have a copy of the data, but want one. To handle the transfer of data, IPFS uses the following subsystems:
+
+- [Bitswap](https://docs.ipfs.tech/concepts/how-ipfs-works/#bitswap-for-data-transfer)
+- [IPFS HTTP Gateways](https://docs.ipfs.tech/concepts/how-ipfs-works/#ipfs-http-gateways)
+- [Sneakernet](https://docs.ipfs.tech/concepts/how-ipfs-works/#sneakernet)
+
+#### Bitswap (for data transfer)
+
+As discussed in [How content routing works in IPFS](https://docs.ipfs.tech/concepts/how-ipfs-works/#bitswap-for-content-routing), IPFS nodes use Bitswap, a message-based, peer-to-peer network protocol for both content routing and the transfer of data. With Bitswap, any peers that an IPFS node is connected to can transfer requested blocks directly to that node without needing to traverse the [DHT](https://docs.ipfs.tech/concepts/how-ipfs-works/#kademlia-distributed-hash-table-dht). Peers also store wantlists, so that if a peer receives requested data at a later time, it can then transfer it to the node that originally requested.
+
+####  IPFS HTTP Gateways
+
+HTTP Gateways allow applications that do not support or implement all IPFS subsystems to fetch data from the IPFS network using an HTTP interface. In its simplest form, a gateway is an IPFS Node that also exposes an [HTTP Gateway API (opens new window)](https://github.com/ipfs/specs/blob/main/http-gateways/README.md).
+
+####  Sneakernet
+
+For use cases where transfer of data over a network connection is not an option, IPFS supports the use of sneakernet to transfer content-addressed data between IPFS nodes. Using IPFS, CAR files (discussed in [How IPFS represents and addresses data](https://docs.ipfs.tech/concepts/how-ipfs-works/#content-addressable-archive-car-files)) can be transferred between two network drives without any network connectivity. Because of IPFS, the data is [verifiable](https://docs.ipfs.tech/concepts/what-is-ipfs/#verifiability) and will have the same CID on both sides of the air gap.
+
+
+## Data Locations - Storage, Memory and Calldata (Solidity Code Example)
+
+### Storage
+
+*  Data saves on blockchain
+* Permanent as long as contract stands
+* It has a higher gas cost because the change is made on blockchain
+
+```solidity
+	pragma solidity ^0.8.0;
+	
+	contract Example {
+	    uint public number; // storage (state variable)
+	
+	    function setNumber(uint _num) public {
+	        number = _num; // نوشته شدن در storage → ذخیره روی بلاکچین
+	    }
+	}
+
+```
+
+### Memory
+
+* The data is temporary and only exist when the function is executed
+* It is destroyed after the function ends
+* Low gas cost than storage
+
+``` solidity
+pragma solidity ^0.8.0;
+
+contract Example {
+    function processData(uint[] memory _data) public pure returns (uint) {
+        return _data[0]; // فقط تو حافظه RAM استفاده میشه
+    }
+}
+```
+
+
+### Calldata
+
+* Specific type of ROM for function parameters
+* Data comes from out of function it cannot be change
+* In term of gas more optimal than memory for parameters
+
+```solidity
+pragma solidity ^0.8.0;
+
+contract Example {
+    function getFirstElement(uint[] calldata _data) public pure returns (uint) {
+        return _data[0]; // فقط خواندن از calldata، تغییر داده نمیشه
+    }
+}
+```
+
+
+
+
+
+
+
+
 

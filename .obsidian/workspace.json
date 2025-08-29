@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "14759a9738f14353",
+            "id": "d04fb333098c2f9d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,7 +180,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "14759a9738f14353",
+  "active": "d04fb333098c2f9d",
   "lastOpenFiles": [
     "Assests/trilemma.png",
     "General Blockchain Knowledge/Storage.md",
