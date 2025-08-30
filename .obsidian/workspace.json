@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d0c468fd71985f64",
+        "id": "11b1514bd0aef502",
         "type": "tabs",
         "children": [
           {
-            "id": "db66f2f0830c7e7d",
+            "id": "8e81c546b6bb62e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General Blockchain Knowledge/Storage.md",
+                "file": "General Blockchain Knowledge/Cryptography.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Storage"
+              "title": "Cryptography"
             }
           }
         ]
@@ -180,19 +180,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "db66f2f0830c7e7d",
+  "active": "8e81c546b6bb62e9",
   "lastOpenFiles": [
+    "Basic Blockchain Knowledge/What is Blockchain.md",
+    "General Blockchain Knowledge/Blockchain Forking.md",
+    "General Blockchain Knowledge/Cryptography.md",
+    "General Blockchain Knowledge/Storage.md",
     "General Blockchain Knowledge/Cryptocurrency Wallet.md",
     "General Blockchain Knowledge/Cryptocurrencies.md",
-    "General Blockchain Knowledge/Blockchain Forking.md",
-    "General Blockchain Knowledge/Storage.md",
     "Assests/trilemma.png",
     "Assests/output (8).png",
     "General Blockchain Knowledge/Decentralization vs Trust.md",
     "Basic Blockchain Knowledge/Blockchain Architecture Layers.md",
     "Basic Blockchain Knowledge/Smart Contract.md",
     "Basic Blockchain Knowledge/What is Decentralized Finance (DeFi) and How Does it Work?.md",
-    "Basic Blockchain Knowledge/What is Blockchain.md",
     "Assests/output (1).png",
     "Assests/output (4).png",
     "General Blockchain Knowledge/Mining and incentive models.md",
