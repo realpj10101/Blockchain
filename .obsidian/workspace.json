@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8544b07caa5eb2f5",
+        "id": "1d7ee7caf8003c69",
         "type": "tabs",
         "children": [
           {
-            "id": "c6536eb590d2984b",
+            "id": "0d997d021ede598e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -180,15 +180,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6536eb590d2984b",
+  "active": "0d997d021ede598e",
   "lastOpenFiles": [
-    "General Blockchain Knowledge/Blockchain Forking.md",
     "General Blockchain Knowledge/Storage.md",
+    "General Blockchain Knowledge/Cryptography.md",
+    "General Blockchain Knowledge/Blockchain Forking.md",
     "Solidity/Phase 0.md",
     "Solidity/Phase 1.md",
     "Solidity/Generate new project.md",
     "Solidity",
-    "General Blockchain Knowledge/Cryptography.md",
     "General Blockchain Knowledge/Cryptocurrency Wallet.md",
     "General Blockchain Knowledge/Untitled.canvas",
     "17.md",

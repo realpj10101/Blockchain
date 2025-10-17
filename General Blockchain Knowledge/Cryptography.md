@@ -68,7 +68,3 @@ Just as the development of digital computers and electronics helped in cryptanal
 
 Research into **post-quantum cryptography** (PQC) has intensified because practical quantum computers would break widely deployed public-key systems such as RSA, Diffie–Hellman and ECC. A 2017 review in _Nature_ surveys the leading PQC families—lattice-based, code-based, multivariate-quadratic and hash-based schemes—and stresses that standardisation and deployment should proceed well before large-scale quantum machines become available.
 
-## Symmetric-key cryptography
-
-Symmetric-key cryptography refers to encryption methods in which both the sender and receiver share the same key (or, less commonly, in which their keys are different, but related in an easily computable way). This was the only kind of encryption publicly known until June 1976.
-
